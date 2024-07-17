@@ -1,0 +1,21 @@
+/* Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+/dts-v1/;
+/plugin/;
+
+#include <dt-bindings/mailbox/qcom-ipcc.h>
+#include <dt-bindings/mailbox/qcom-ipcc-canoe.h>
+#include <dt-bindings/interrupt-controller/arm-gic.h>
+#include "canoe-synx.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Canoe SoC";
+	compatible = "qcom,canoe";
+	qcom,msm-id = <0x10294 0x10000>, <0x10294 0x20000>, <0x10295 0x10000>, <0x10295 0x20000>,
+		      <0x30294 0x10000>, <0x30294 0x20000>, <0x30295 0x10000>, <0x30295 0x20000>,
+		      <0x1010294 0x10000>, <0x1010294 0x20000>, <0x1010295 0x10000>,
+		      <0x1010295 0x20000>, <0x1030294 0x10000>, <0x1030294 0x20000>,
+		      <0x1030295 0x10000>, <0x1030295 0x20000>;
+	qcom,board-id = <0 0>;
+};

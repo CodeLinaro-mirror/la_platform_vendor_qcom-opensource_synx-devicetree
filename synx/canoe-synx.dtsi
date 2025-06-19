@@ -1,4 +1,4 @@
-/* Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  * SPDX-License-Identifier: BSD-3-Clause
  */
 #include <dt-bindings/ipclite-signals.h>
@@ -24,8 +24,9 @@
 		#size-cells = <2>;
 		major_version = <1>;
 		minor_version = <0>;
-		feature_mask_low = <0x0007>;
+		feature_mask_low = <0x000F>;
 		feature_mask_high = <0x0000>;
+		global_par_custom_val=<40>;
 		ranges;
 
 		ipclite_apss: apss {

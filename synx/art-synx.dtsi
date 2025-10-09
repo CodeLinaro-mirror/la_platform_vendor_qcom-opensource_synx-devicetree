@@ -11,7 +11,7 @@
 	ipcc_compute_l0: qcom,ipcc_compute_l0@11c3000 {
 		compatible = "qcom,ipcc";
 		reg = <0x0 0x11c3000 0x0 0x1000>;
-		interrupts = <GIC_SPI 230 IRQ_TYPE_LEVEL_HIGH>;
+		interrupts = <GIC_ESPI 294 IRQ_TYPE_LEVEL_HIGH>;
 		interrupt-controller;
 		#interrupt-cells = <3>;
 		#mbox-cells = <2>;

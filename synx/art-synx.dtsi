@@ -11,7 +11,7 @@
 	ipcc_compute_l0: qcom,ipcc_compute_l0@11c3000 {
 		compatible = "qcom,ipcc";
 		reg = <0x0 0x11c3000 0x0 0x1000>;
-		interrupts = <GIC_SPI 230 IRQ_TYPE_LEVEL_HIGH>;
+		interrupts = <GIC_ESPI 294 IRQ_TYPE_LEVEL_HIGH>;
 		interrupt-controller;
 		#interrupt-cells = <3>;
 		#mbox-cells = <2>;
@@ -24,9 +24,8 @@
 		#size-cells = <2>;
 		major_version = <1>;
 		minor_version = <0>;
-		feature_mask_low = <0x000F>;
+		feature_mask_low = <0x0007>;
 		feature_mask_high = <0x0000>;
-		global_par_custom_val=<40>;
 		ranges;
 
 		ipclite_apss: apss {
@@ -37,7 +36,7 @@
 				index = <0>;
 				mboxes = <&ipcc_compute_l0 IPCC_COMPUTE_L0_APSS
 					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_MSG>;
-					interrupt-parent = <&ipcc_compute_l0>;
+				interrupt-parent = <&ipcc_compute_l0>;
 				interrupts = <IPCC_COMPUTE_L0_APSS
 					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_MSG
 					IRQ_TYPE_EDGE_RISING>;
@@ -414,71 +413,6 @@
 					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_DEBUG>;
 				interrupt-parent = <&ipcc_compute_l0>;
 				interrupts = <IPCC_COMPUTE_L0_CAM1
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_DEBUG
-					IRQ_TYPE_EDGE_RISING>;
-			};
-		};
-
-		ipclite_gpu: gpu {
-			qcom,remote-pid = <3>;
-			label = "gpu";
-
-			ipclite_signal_0 {
-				index = <0>;
-				mboxes = <&ipcc_compute_l0 IPCC_COMPUTE_L0_GPU
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_MSG>;
-				interrupt-parent = <&ipcc_compute_l0>;
-				interrupts = <IPCC_COMPUTE_L0_GPU
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_MSG
-					IRQ_TYPE_EDGE_RISING>;
-			};
-
-			ipclite_signal_1 {
-				index = <1>;
-				mboxes = <&ipcc_compute_l0 IPCC_COMPUTE_L0_GPU
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_MEM_INIT>;
-				interrupt-parent = <&ipcc_compute_l0>;
-				interrupts = <IPCC_COMPUTE_L0_GPU
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_MEM_INIT
-					IRQ_TYPE_EDGE_RISING>;
-			};
-
-			ipclite_signal_2 {
-				index = <2>;
-				mboxes = <&ipcc_compute_l0 IPCC_COMPUTE_L0_GPU
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_VERSION>;
-				interrupt-parent = <&ipcc_compute_l0>;
-				interrupts = <IPCC_COMPUTE_L0_GPU
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_VERSION
-					IRQ_TYPE_EDGE_RISING>;
-			};
-
-			ipclite_signal_3 {
-				index = <3>;
-				mboxes = <&ipcc_compute_l0 IPCC_COMPUTE_L0_GPU
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_TEST>;
-				interrupt-parent = <&ipcc_compute_l0>;
-				interrupts = <IPCC_COMPUTE_L0_GPU
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_TEST
-					IRQ_TYPE_EDGE_RISING>;
-			};
-
-			ipclite_signal_4 {
-				index = <4>;
-				mboxes = <&ipcc_compute_l0 IPCC_COMPUTE_L0_GPU
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_SSR>;
-				interrupt-parent = <&ipcc_compute_l0>;
-				interrupts = <IPCC_COMPUTE_L0_GPU
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_SSR
-					IRQ_TYPE_EDGE_RISING>;
-			};
-
-			ipclite_signal_5 {
-				index = <5>;
-				mboxes = <&ipcc_compute_l0 IPCC_COMPUTE_L0_GPU
-					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_DEBUG>;
-				interrupt-parent = <&ipcc_compute_l0>;
-				interrupts = <IPCC_COMPUTE_L0_GPU
 					IPCC_COMPUTE_L0_SIGNAL_IPCLITE_DEBUG
 					IRQ_TYPE_EDGE_RISING>;
 			};

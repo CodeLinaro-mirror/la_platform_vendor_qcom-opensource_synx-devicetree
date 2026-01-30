@@ -24,7 +24,7 @@
 		#size-cells = <2>;
 		major_version = <1>;
 		minor_version = <0>;
-		feature_mask_low = <0x0007>;
+		feature_mask_low = <0x000F>;
 		feature_mask_high = <0x0000>;
 		ranges;
 

@@ -3,6 +3,10 @@ SYNX_TARGET_MKFILE_PATH := $(SYNX_DEVICETREE_ROOT)/config/$(MSM_ARCH).mk
 # Check to see if current target makefile exists
 SYNX_TARGET_EXISTS := $(or $(and $(wildcard $(SYNX_TARGET_MKFILE_PATH)),y),n)
 
+ifeq ($(CONFIG_ARCH_PIKACHU), y)
+export CONFIG_ARCH_PIKACHU=y
+endif
+
 # Since Kernel SI can support multiple ARCH's this allows only the current selected target ARCH
 # to compile.
 ifeq ($(SYNX_TARGET_EXISTS), y)

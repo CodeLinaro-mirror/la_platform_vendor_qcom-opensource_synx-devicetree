@@ -10,7 +10,7 @@
 
 /{
     model = "Qualcomm Technologies, Inc. Pikachu";
-    compatible = "qcom,pikachu", "qcom,pikachup";
-    qcom,msm-id =  <736 0x10000>, <737 0x10000>;
+    compatible = "qcom,pikachu", "qcom,pikachup", "qcom,pikachus", "qcom,pikachups";
+    qcom,msm-id =  <736 0x10000>, <737 0x10000>, <783 0x10000>, <784 0x10000>;
     qcom,board-id = <0 0>;
 };

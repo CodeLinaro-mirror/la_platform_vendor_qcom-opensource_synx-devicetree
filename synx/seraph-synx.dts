@@ -12,6 +12,6 @@
 	model = "Qualcomm Technologies, Inc. Seraph";
 	compatible = "qcom,seraph", "qcom,seraphp", "qcom,idp",
 			"qcom,seraph-v1.1-idp", "qcom,seraph-v1.1-atp";
-	qcom,msm-id = <672 0x10000>, <673 0x10000>, <672 0x10001>, <673 0x10001>;
+	qcom,msm-id = <672 0x10000>, <673 0x10000>, <672 0x10001>, <673 0x10001>, <792 0x10001>;
 	qcom,board-id = <0 0>;
 };

@@ -1,0 +1,17 @@
+/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+/dts-v1/;
+/plugin/;
+
+#include <dt-bindings/mailbox/qcom-ipcc.h>
+#include <dt-bindings/mailbox/qcom-ipcc-honu.h>
+#include <dt-bindings/interrupt-controller/arm-gic.h>
+#include "honu-synx.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. Honu SoC";
+	compatible = "qcom,honu";
+	qcom,msm-id = <775 0x10000>;
+	qcom,board-id = <0 0>;
+};
